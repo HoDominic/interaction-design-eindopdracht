@@ -16,7 +16,7 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
-@font-face {
+/*@font-face {
     font-family: "Clear Sans Web";
     font-weight: 200;
     src: url("../fonts/ClearSans-Light-webfont.woff") format("woff");
@@ -33,13 +33,26 @@
     font-family: "Clear Sans Web";
     font-weight: 600;
     src: url("../fonts/ClearSans-Medium-webfont.woff") format("woff");
-}
+}*/
 
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
 
+:root{
 
+    /* Global colors */
+
+
+
+
+    /* global page settings */
+
+    --global-html-backgroundColor: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+
+
+}
 
 
 /*------------------------------------*\
@@ -53,12 +66,12 @@
 */
 
 html {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 32px;
     font-family: "Clear Sans Web", Helvetica, arial, sans-serif;
     font-weight: 200;
     color: #fff;
-    background: linear-gradient(to bottom right, #0A257D, #061649);
+    background:  var(--global-html-backgroundColor);
     background-attachment: fixed;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
