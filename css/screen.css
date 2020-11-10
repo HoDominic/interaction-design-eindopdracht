@@ -57,6 +57,7 @@
    --global-color-neutral-xx-dark: #4b4c60;
    --global-color-neutral-xxx-dark: #35374d;
    --global-color-neutral-xxxx-dark: #20223a;
+   
 
 
     /* global page settings */
@@ -112,43 +113,7 @@ html {
         justify-content: center;
   }
 
-  .grid-1{
-    background: #6fffe2;
-   
-  }
-  .grid-2{
-    background: #7fffd2;
-    
-}
-.grid-3{
-    background:  white;
-    
-}
-.grid-4{
-    background:white;
-    
   
-}
-.grid-5{
-    background:#753;
-    
-}
-.grid-6{
-    background:#888;
-    
-}
-.grid-7{
-    background:#888;
-    
-}
-.grid-8{
-    background:#888;
-    
-}
-.grid-9{
-    background:#888;
-    
-}
 
 /*------------------------------------*\
 #Elements
@@ -237,7 +202,7 @@ img {
 
 .c-lead--lg {
     font-size: 32px;
-    line-height: 30px;
+    line-height: 40px;
     font-family: "Roboto";
     font-weight: 300;
 }
