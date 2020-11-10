@@ -100,7 +100,7 @@ html {
     grid-template-columns:1fr ;
     grid-template-rows:   1fr ;
    
-    height: 100vh;
+    
 
 
   }
@@ -126,7 +126,7 @@ html {
 }
 .grid-4{
     background:white;
-    background-image: url( "img/png/illustration-main.png");
+    
   
 }
 .grid-5{
@@ -222,6 +222,9 @@ img {
     font-size: 23px;
     line-height: 31px;
     font-weight: 300;
+    margin-top: 50px;
+    font-family: "Roboto";
+    
 }
 .c-lead {
     font-weight: 400;
@@ -234,22 +237,22 @@ img {
 
 .c-lead--lg {
     font-size: 32px;
-    line-height: 40px;
+    line-height: 30px;
+    font-family: "Roboto";
+    font-weight: 300;
 }
 
 .c-lead--xl {
-    font-size: 41px;
-    line-height: 60px;
+    font-size: 75px;
+    line-height: 85px;
     font-weight: 700;
-    color: #6CC9D1;
+    color: rgb(132,201,209);/*#6CC9D1*//*459AC4*/
+    
 }
 
-.c-secondairy{
-    font-size: 32px ;
-    font-weight: 300;
-    letter-spacing: 0.5;
-    color: var(--global-color-neutral-xxxx-dark);
-}
+
+    
+
 
 /*
     Component: figure
@@ -559,6 +562,7 @@ img {
 
 .u-max-width-md {
     max-width: 50em !important;
+    text-align: center;
 }
 
 .u-max-width-lg {
@@ -569,7 +573,9 @@ img {
     max-width: none !important;
 }
 
-
+.ta{
+    text-align: center;
+}
 /*
     Utilities: align
     ---
