@@ -66,23 +66,20 @@
 */
 
 html {
+
     font-size: 16px;
     line-height: 32px;
     font-family: "Clear Sans Web", Helvetica, arial, sans-serif;
     font-weight: 200;
-    color: #fff;
-    background:  var(--global-html-backgroundColor);
-    background-attachment: fixed;
-    box-sizing: border-box;
+    color: #000;
+    background-image: white ;/*var(--global-html-backgroundColor)*/
+    
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+
 
 /*------------------------------------*\
 #Elements
@@ -100,13 +97,301 @@ img {
 }
 
 
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns:1.5fr 1fr  ;
+    grid-template-rows: 0.25fr  2fr 1fr  ;
+   
+    height: 100vh;
+
+
+  }
+
+
+  .title{
+        font-size: 20px;
+        align-self: center;
+        justify-content: center;
+  }
+
+  .grid-1{
+    background: #6fffe2;
+   
+  }
+  .grid-2{
+    background: #7fffd2;
+    
+}
+.grid-3{
+    background: #25f;
+    
+}
+.grid-4{
+    background:#255;
+  
+}
+.grid-5{
+    background:#753;
+    
+}
+.grid-6{
+    background:#888;
+    
+}
+.grid-7{
+    background:#888;
+    
+}
+.grid-8{
+    background:#888;
+    
+}
+.grid-9{
+    background:#888;
+    
+}
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+
+.c-link-cta {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 16px 32px;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
+    background: linear-gradient(to right, #033AA7 0%, #0053FB 51%, #033AA7 100%);
+    background-size: 200% auto;
+    box-shadow: inset 0 0 0 1px rgba(142,199,255,.2), 0 0 10px rgba(17,149,255,.30) ;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #ffffff;
+}
+
+.c-link-cta:hover {
+    color: #fff;
+    background-position: right center;
+    box-shadow: inset 0 0 0 1px rgba(142,199,255,.4), 0 0 10px rgba(17,149,255,.8) ;
+}
 
 
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
 
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
 
+.o-row {
+    display: flow-root; /* New solution! Fixes margin collapsing */
+    position: relative;
+    padding: 24px 24px 0;
+}
+
+/* size modifiers */
+
+.o-row--lg {
+    padding: 48px 24px 24px;
+}
+
+/* color modifiers */
+
+.o-row--neutral-xxxx-light {
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .o-row {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .o-row--lg {
+        padding-top: 72px;
+        padding-bottom: 48px;
+    }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 71em; /* 71 * 18px = 1278px */
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    /* overflow-x: hidden; */
+    position: relative;
+    display: flow-root; /* New solution! Fixes margin collapsing */
+}
+
+.o-section + .o-section {
+    padding-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        padding-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        padding-top: 72px;
+    }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .o-layout__item {
+        flex-basis: 100%;
+    }
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+    margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+    padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+    margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+    padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+    padding: 0 24px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+    justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+    justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+    justify-content: center;
+}
+
+.o-layout--justify-space-around {
+    justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+    align-items: flex-start;
+}
+
+.o-layout--align-end {
+    align-items: flex-end;
+}
+
+.o-layout--align-center {
+    align-items: center;
+}
+
+.o-layout--align-baseline {
+    align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+    align-content: start;
+}
+
+.o-layout--align-content-end {
+    align-content: end;
+}
+
+.o-layout--align-content-center {
+    align-content: center;
+}
+
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
