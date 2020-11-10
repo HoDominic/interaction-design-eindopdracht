@@ -36,7 +36,8 @@
 
 :root{
 
-    /* Global colors */
+    /* Text colors */
+    --lead-text-color:rgb(132,201,209);
 
    /* Global colors */
    --global-color-alpha-light: #4F95FF;
@@ -211,7 +212,7 @@ img {
     font-size: 75px;
     line-height: 85px;
     font-weight: 700;
-    color: rgb(132,201,209);/*#6CC9D1*//*459AC4*/
+    color: var(--lead-text-color);/*#6CC9D1*//*459AC4*/
     
 }
 
