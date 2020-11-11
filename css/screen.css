@@ -180,7 +180,19 @@ img {
     box-shadow: inset 0 0 0 1px rgba(142,199,255,.4), 0 0 10px rgba(17,149,255,.8) ;
 }
 
+/*INPUT*/
 
+
+
+.c-input{
+    
+    width: 250px;
+    height: 30px;
+    outline: none;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+}
 /*
     Component: Lead
     ---
