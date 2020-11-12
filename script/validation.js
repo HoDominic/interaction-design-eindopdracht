@@ -1,10 +1,20 @@
 
 
-const getDOMElements = function () {
 
 
 
-}
+/*const getDOMElements = function () {
+
+    //DOM elementen
+
+    const form = document.querySelector(".form");
+
+    const email = document.querySelector('.c-input').value;
+
+
+    const text = document.querySelector('.js-error-message');
+
+}*/
 
 
 
@@ -50,13 +60,11 @@ const validation = function () {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     //check of de pagina juist laadt
     console.log("DOM loaded");
 
-
+    //getDOMElements();
 
 })
 
