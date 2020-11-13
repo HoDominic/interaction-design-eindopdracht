@@ -1,12 +1,15 @@
 
 //Globale variabele
-let button
+let button, form, email, text;
 
 
 //DOM
 const getDOMElements = function () {
     button = document.querySelector('.c-button');
-}
+
+
+
+};
 
 //Button event
 
@@ -16,6 +19,7 @@ const listenToClickButton = function () {
 
 function changeText() {
     button.innerHTML = "Thanks for subscribing!";
+
 }
 
 
@@ -25,13 +29,9 @@ const validation = function () {
 
     //DOM elementen
 
-    const form = document.querySelector(".form");
-
-    const email = document.querySelector('.c-input').value;
-
-
-    const text = document.querySelector('.js-error-message');
-
+    form = document.querySelector(".form");
+    email = document.querySelector('.c-input').value;
+    text = document.querySelector('.js-error-message');
 
     //Verificatie
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -56,7 +56,7 @@ const validation = function () {
             text.style.color = "#84c9d1";
         }
     }
-}
+};
 
 
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     listenToClickButton();
 
-
+    validation();
 
 
 
