@@ -1,21 +1,22 @@
 
+//Globale variabele
+let button
 
 
+//DOM
+const getDOMElements = function () {
+    button = document.querySelector('.c-button');
+}
 
+//Button event
 
-/*const getDOMElements = function () {
+const listenToClickButton = function () {
+    button.addEventListener('click', changeText);
+}
 
-    //DOM elementen
-
-    const form = document.querySelector(".form");
-
-    const email = document.querySelector('.c-input').value;
-
-
-    const text = document.querySelector('.js-error-message');
-
-}*/
-
+function changeText() {
+    button.innerHTML = "Thanks for subscribing!";
+}
 
 
 
@@ -64,7 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //check of de pagina juist laadt
     console.log("DOM loaded");
 
-    //getDOMElements();
+    getDOMElements();
+
+    listenToClickButton();
+
+
+
+
 
 })
 

@@ -15,27 +15,40 @@ customHeaders.append('Accept', 'application/json');
 
 // Fetch API endpoint in a function
 
-
+/*
 const getAPI = async function (endpoint) {
     try {
         const response = await fetch(endpoint, { headers: customHeaders });
         const data = await response.json();
         console.log(data);
-        console.log(data.description.title)
+        //console.log(data.data)
+
+        const rows = data.split('\n');
+        console.log(rows);
 
 
     } catch (error) {
         console.error("An error occured, we handled it", error);
     }
 
-};
+};*/
 
+async function getData(endpoint) {
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    console.log(data);
+
+    const rows = data.split('\n');
+    console.log(rows);
+}
+
+getData(serverEndpoint);
 
 
 
 
 // call function
-getAPI(serverEndpoint);
+//getAPI(serverEndpoint);
 
 
 
