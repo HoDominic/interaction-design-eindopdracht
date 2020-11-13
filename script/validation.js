@@ -19,7 +19,7 @@ const listenToClickButton = function () {
 
 function changeText() {
     button.innerHTML = "Thanks for subscribing!";
-
+    button.style.background = '#63BBC5';
 }
 
 

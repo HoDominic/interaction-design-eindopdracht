@@ -179,16 +179,19 @@ img {
 
 
 
+
+
 .c-button:active {
     color: #ffffff;
-    transition: ease-in 2s;
+    
     background: var(--lead-theme-color-x-dark);
+    
 }
 
 
 .c-button:hover {
     color: #fff;
-    background-position: right center;
+    
     box-shadow: inset 300px 0 0 0 var(--lead-theme-color-x-dark);
 }
 
