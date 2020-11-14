@@ -18,8 +18,16 @@ const listenToClickButton = function () {
 }
 
 function changeText() {
+    //text van button wijzigen
     button.innerHTML = "Thanks for subscribing!";
+    //kleur van achtergrond 
     button.style.background = '#63BBC5';
+
+    //animation
+    button.classList.add('animate__animated ,animate__bounceInDown');
+    button.style.setProperty('--animate-duration', '3s');
+
+
 }
 
 
