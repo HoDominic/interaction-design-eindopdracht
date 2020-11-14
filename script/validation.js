@@ -22,10 +22,8 @@ function changeText() {
     button.innerHTML = "Thanks for subscribing!";
     //kleur van achtergrond 
     button.style.background = '#63BBC5';
+    button.style.color = "white";
 
-    //animation
-    button.classList.add('animate__animated ,animate__bounceInDown');
-    button.style.setProperty('--animate-duration', '3s');
 
 
 }
