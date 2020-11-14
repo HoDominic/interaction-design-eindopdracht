@@ -89,7 +89,7 @@ html {
     font-family: "Open Sans Condensed", Helvetica, arial, sans-serif;
     font-weight: 400;
     color: #000;
-    background-image: white ;/*var(--global-html-backgroundColor)*/
+    background-image: var(--global-color-neutral-xxxx-light) ;/*var(--global-html-backgroundColor)*/
     
     
     -webkit-font-smoothing: antialiased;
