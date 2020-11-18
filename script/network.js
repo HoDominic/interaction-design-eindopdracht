@@ -1,33 +1,5 @@
 
 
-const xLabels = [];
-
-chartIt();
-function chartIt() {
-
-    const ctx = document.getElementById('chart').getContext('2d');
-
-    //x-label
-
-    const chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: xLabels,
-            datasets: [{
-                label: 'Global Temperature Anomaly',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-                borderColor: ['rgba(255, 99, 132, 1)'],
-                borderWidth: 1
-            }]
-        }
-
-    });
-}
-
-
-
-
 //API URL
 const serverEndpoint = "https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/ytd/12/1880-2016.json";
 
@@ -39,34 +11,44 @@ let customHeaders = new Headers();
 customHeaders.append('Accept', 'application/json');
 
 
+//globaal
+const xLabels = [];
+const yTemps = [];
 
 
-// Fetch API endpoint in a function
 
-/*
-const getAPI = async function (endpoint) {
-    try {
-        const response = await fetch(endpoint, { headers: customHeaders });
-        const data = await response.json();
-        console.log(data);
-        //console.log(data.data)
+chartIt();
+async function chartIt() {
+    await getData(serverEndpoint);
 
-        const rows = data.split('\n');
-        console.log(rows);
+    const ctx = document.getElementById('chart').getContext('2d');
 
 
-    } catch (error) {
-        console.error("An error occured, we handled it", error);
-    }
 
-};*/
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: xLabels,
+            datasets: [{
+                label: 'Global Temperature Anomaly',
+                data: yTemps,
+                backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+                borderColor: ['rgba(255, 99, 132, 1)'],
+                borderWidth: 1
+            }]
+        }
+
+    });
+}
+
+
 
 //Fetch data from API
 async function getData(endpoint) {
     const response = await fetch(endpoint);
     const data = await response.json();
 
-
+    //await getData(serverEndpoint);
 
 
 
@@ -101,31 +83,44 @@ async function getData(endpoint) {
         console.log("yearTempArray: " + allYearsTemp[i]);
     }
 
+    //jaren voor x-as van chart
     for (i = 0; i < allYears.length; i++) {
         xLabels[i] = allYears[i];
     }
 
+    //jaren voor y-as van chart
+    for (i = 0; i < allYearsTemp.length; i++) {
+        yTemps[i] = allYearsTemp[i];
+    }
 
 
 }
 
 
-getData(serverEndpoint);
-//Years/jaren, moet in een aparte variabele
 
 
 
+// Fetch API endpoint in a function
 
 /*
-for (let key in data) {
-console.log(data[key])
+const getAPI = async function (endpoint) {
+    try {
+        const response = await fetch(endpoint, { headers: customHeaders });
+        const data = await response.json();
+        console.log(data);
+        //console.log(data.data)
+
+        const rows = data.split('\n');
+        console.log(rows);
+
+
+    } catch (error) {
+        console.error("An error occured, we handled it", error);
+    }
+
 };*/
 
-// call function
-//getAPI(serverEndpoint);
 
 
-
-//CHART
 
 
