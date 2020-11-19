@@ -26,16 +26,32 @@ async function chartIt() {
 
 
     const chart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: xLabels,
             datasets: [{
                 label: 'Global Temperature Anomaly',
                 data: yTemps,
-                backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: ['rgba(255, 99, 132, 1)'],
-                borderWidth: 1
+                borderWidth: 1,
+                fill: false
             }]
+        },
+        //
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+
+                        //graden teken toevoegen
+                        callback: function (value, index, values) {
+                            return value + '°';
+                        }
+                    }
+                }]
+            }
         }
 
     });
