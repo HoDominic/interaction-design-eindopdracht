@@ -177,6 +177,32 @@ img {
    
 }
 
+@media screen and (max-width: 992px) {
+    .c-button{
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 600;
+        padding: 16px 32px;
+    
+        margin-top: 30px;
+        color: var(--global-color-neutral-xxxx-dark);
+       
+        background: #fff ;/*var(--lead-theme-color)*/
+        background-size: 200% auto;
+        overflow: hidden;
+    
+        /*Hover animation*/
+        box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
+        transition: ease-out 0.3s;
+        outline: none;
+        border: 1px solid var(--global-color-neutral-xxxx-dark);
+    }
+
+  }
 
 
 
@@ -188,6 +214,18 @@ img {
       border: none;
   
 }  
+
+@media screen and (max-width: 992px) {
+  
+.c-button:hover {
+    /*hover animation*/ 
+      box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+      color: var(--global-color-neutral-xxxx-light);
+      border: none;
+  
+}  
+
+  }
 
 .c-button:active {
     color: var(--global-color-neutral-xxxx-light);
@@ -201,6 +239,25 @@ img {
     
     
 }
+
+
+
+@media screen and (max-width: 992px) {
+  
+    .c-button:active {
+        color: var(--global-color-neutral-xxxx-light);
+        
+        background: var(--lead-theme-color);
+    
+        
+        box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+    
+        animation: shake 0.8s ease-in ;
+        
+        
+    }
+    
+      }
 
 
 @keyframes shake{
@@ -227,7 +284,32 @@ img {
 }
 
 
+@media screen and (max-width: 992px) {
+  
+    @keyframes shake{
 
+        0%{
+            transform: translate(0);
+        }
+        20%,
+        40%,
+        60%,
+        80%{
+            transform: translate(.8em);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+        }
+        10%,
+        30%,
+        50%{
+            transform: translate(-2em);
+        }
+        70%,
+        100%{
+            transform: translate(0);
+        }
+    }
+    
+      }
 
 /*INPUT*/
 
