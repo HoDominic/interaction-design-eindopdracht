@@ -32,8 +32,8 @@ async function chartIt() {
             datasets: [{
                 label: 'Global Temperature Anomaly',
                 data: yTemps,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: ['rgba(255, 99, 132, 1)'],
+                backgroundColor: '#63BBC5',
+                borderColor: ['rgb(132, 201, 209)'],
                 borderWidth: 1,
                 fill: false
             }]
@@ -44,6 +44,7 @@ async function chartIt() {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
+                        responsive: true,
 
                         //graden teken toevoegen
                         callback: function (value, index, values) {

@@ -1,1 +1,1031 @@
 
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+@font-face {
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+    src: url("../fonts/OpenSansCondensed-Light.ttf") ;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    font-weight: 700;
+    src: url("../fonts/OpenSansCondensed-Bold.ttf") ;
+  
+}
+
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root{
+
+    /* Text colors */
+    --lead-theme-color:rgb(132, 201, 209);
+    --lead-theme-color-x-dark:#63BBC5;
+
+
+   /* Global colors */
+   --global-color-alpha-light: #4F95FF;
+   --global-color-alpha: #3385FF;
+   --global-color-alpha-dark: #2E77E6;
+   --global-color-alpha-x-dark: #1B4186;
+   --global-color-alpha-transparent: #3385ffbf;
+   --global-color-alpha-x-transparent: #3385ff4d;
+
+   --global-color-neutral-xxxx-light: #F5F6FA;
+   --global-color-neutral-xxx-light: #E2E3E7;
+   --global-color-neutral-xx-light: #caccd4;
+   --global-color-neutral-x-light: #b5b6c0;
+   --global-color-neutral-light: #a0a1ad;
+   --global-color-neutral: #8b8c9a;
+   --global-color-neutral-dark: #757787;
+   --global-color-neutral-x-dark: #606274;
+   --global-color-neutral-xx-dark: #4b4c60;
+   --global-color-neutral-xxx-dark: #35374d;
+   --global-color-neutral-xxxx-dark: #20223a;
+   
+
+
+    /* global page settings */
+
+    --global-html-backgroundColor: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+
+
+}
+
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+
+    font-size: 16px;
+    line-height: 32px;
+    font-family: "Open Sans Condensed", Helvetica, arial, sans-serif;
+    font-weight: 400;
+    color: #000;
+    background-image: var(--global-color-neutral-xxxx-light) ;/*var(--global-html-backgroundColor)*/
+    
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*GRID*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.7fr 0.3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "top-grid top-grid top-grid top-grid"
+      "middle-grid middle-grid middle-grid middle-grid"
+      "bottom-grid-left bottom-grid-left bottom-grid-right bottom-grid-right";
+  }
+  .top-grid { grid-area: top-grid; }
+  .middle-grid { grid-area: middle-grid; }
+  .bottom-grid-left { grid-area: bottom-grid-left; }
+  .bottom-grid-right { grid-area: bottom-grid-right; }
+
+
+
+  .title{
+    font-size: 20px;
+    align-self: center;
+    justify-content: center;
+}
+
+
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+/*
+Elements: Images
+---
+Default markup for images to make them responsive
+*/
+
+img {
+max-width: 100%;
+vertical-align: top;
+margin-bottom: 100px;
+
+}
+
+
+@media (max-width: 550px) {
+.img {
+ height: 200px;
+}
+}
+
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+/*
+Component: CTA link
+---
+Small cta link with custom animation
+*/
+
+.c-button {
+display: inline-block;
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 13px;
+line-height: 24px;
+font-weight: 600;
+padding: 16px 32px;
+
+margin-top: 30px;
+color: var(--global-color-neutral-xxxx-dark);
+
+background: #fff ;/*var(--lead-theme-color)*/
+background-size: 200% auto;
+overflow: hidden;
+
+/*Hover animation*/
+box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
+transition: ease-out 0.3s;
+outline: none;
+border: 1px solid var(--global-color-neutral-xxxx-dark);
+
+}
+
+@media screen and (max-width: 992px) {
+.c-button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 16px 32px;
+
+    margin-top: 30px;
+    color: var(--global-color-neutral-xxxx-dark);
+   
+    background: #fff ;/*var(--lead-theme-color)*/
+    background-size: 200% auto;
+    overflow: hidden;
+
+    /*Hover animation*/
+    box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
+    transition: ease-out 0.3s;
+    outline: none;
+    border: 1px solid var(--global-color-neutral-xxxx-dark);
+}
+
+}
+
+
+
+
+.c-button:hover {
+/*hover animation*/ 
+  box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+  color: var(--global-color-neutral-xxxx-light);
+  border: none;
+
+}  
+
+@media screen and (max-width: 992px) {
+
+.c-button:hover {
+/*hover animation*/ 
+  box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+  color: var(--global-color-neutral-xxxx-light);
+  border: none;
+
+}  
+
+}
+
+.c-button:active {
+color: var(--global-color-neutral-xxxx-light);
+
+background: var(--lead-theme-color);
+
+
+box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+
+animation: shake 0.8s ease-in ;
+
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+.c-button:active {
+    color: var(--global-color-neutral-xxxx-light);
+    
+    background: var(--lead-theme-color);
+
+    
+    box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+
+    animation: shake 0.8s ease-in ;
+    
+    
+}
+
+  }
+
+
+@keyframes shake{
+
+0%{
+    transform: translate(0);
+}
+20%,
+40%,
+60%,
+80%{
+    transform: translate(.8em);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+}
+10%,
+30%,
+50%{
+    transform: translate(-2em);
+}
+70%,
+100%{
+    transform: translate(0);
+}
+}
+
+
+@media screen and (max-width: 992px) {
+
+@keyframes shake{
+
+    0%{
+        transform: translate(0);
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+        transform: translate(.8em);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+    }
+    10%,
+    30%,
+    50%{
+        transform: translate(-2em);
+    }
+    70%,
+    100%{
+        transform: translate(0);
+    }
+}
+
+  }
+
+/*INPUT*/
+
+
+
+.c-input{
+
+width: 250px;
+height: 30px;
+outline: none;
+border-radius: 50px;
+left: 0;
+top: 0;
+border: 1px solid var(--lead-theme-color);
+padding-left: 30px;
+font-size: 1.1rem;
+}
+
+
+
+/*placeholder*/
+
+.js-error-message{
+font-size: 16px;
+font-family: "Roboto";
+}
+
+
+/*
+Component: Lead
+---
+Lead type treatments to style everything that differs from standard typography elements
+*/
+.c-lead--sm{
+font-size: 23px;
+line-height: 31px;
+font-weight: 300;
+margin-top: 50px;
+font-family: "Roboto";
+
+}
+.c-lead {
+font-weight: 400;
+
+}
+
+.c-lead--m{
+font-weight: 700;
+}
+
+.c-lead--lg {
+font-size: 32px;
+line-height: 40px;
+font-family: "Roboto";
+font-weight: 300;
+}
+
+.c-lead--xl {
+font-size: 75px;
+line-height: 85px;
+font-weight: 700;
+color: var(--lead-theme-color);/*#6CC9D1*//*459AC4*/
+
+}
+
+
+
+
+
+/*
+Component: figure
+---
+Special type of figure and figcaption
+*/
+
+.c-figure {
+position: relative;
+}
+
+.c-figure__caption {
+line-height: 15px;
+margin-top: 8px;
+padding-left: 6px;
+padding-top: 1px;
+border: 2px solid #0053FB;
+border-width: 0 0 0 2px;
+color: #474D59;
+}
+
+@media (min-width: 768px) {
+.c-figure__caption--absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 8px;
+    text-align: right;
+    background-color: #fff;
+    padding: 16px;
+    max-width: 260px;
+    border-width: 0 4px 0 0;
+}
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+/*
+Objects: Row
+---
+Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+display: flow-root; /* New solution! Fixes margin collapsing */
+position: relative;
+padding: 24px 24px 0;
+}
+
+/* size modifiers */
+
+.o-row--lg {
+padding: 48px 24px 24px;
+}
+
+/* color modifiers */
+
+.o-row--neutral-xxxx-light {
+background-color: #fff;
+}
+
+@media (min-width: 768px) {
+.o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.o-row--md {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.o-row--lg {
+    padding-top: 72px;
+    padding-bottom: 48px;
+}
+}
+
+/*
+Objects: Container
+---
+Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+margin-left: auto;
+margin-right: auto;
+max-width: 71em; /* 71 * 18px = 1278px */
+}
+
+.container-3{
+display:flex;
+
+}
+/*
+Objects: section
+---
+Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+/* overflow-x: hidden; */
+position: relative;
+display: flow-root; /* New solution! Fixes margin collapsing */
+}
+
+.o-section + .o-section {
+padding-top: 24px;
+}
+
+@media (min-width: 768px) {
+.o-section--lg + .o-section--lg,
+.o-section--xl + .o-section--xl {
+    padding-top: 48px;
+}
+}
+
+@media (min-width: 1200px) {
+.o-section--xl + .o-section--xl {
+    padding-top: 72px;
+}
+}
+
+/*
+Objects: Layout
+---
+The layout object provides us with a column-style layout system. This object
+contains the basic structural elements, but classes should be complemented
+with width utilities
+*/
+
+.o-layout {
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+flex-wrap: wrap;
+}
+
+.o-layout__item {
+    flex-basis: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+padding: 0 24px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+justify-content: center;
+}
+
+.o-layout--justify-space-around {
+justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+align-items: flex-start;
+}
+
+.o-layout--align-end {
+align-items: flex-end;
+}
+
+.o-layout--align-center {
+align-items: center;
+}
+
+.o-layout--align-baseline {
+align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+align-content: start;
+}
+
+.o-layout--align-content-end {
+align-content: end;
+}
+
+.o-layout--align-content-center {
+align-content: center;
+}
+
+.o-layout--align-content-space-around {
+align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+align-content: space-between;
+}
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
+/*
+Utilities: color
+---
+Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral {
+color: var(--global-color-neutral);
+}
+
+.u-color-neutral-dark {
+color: var(--global-color-neutral-dark);
+}
+
+/*
+Utilities: spacing
+---
+Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+padding-top: 0 !important;
+}
+
+.u-mb-clear {
+margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+margin-bottom: var(--global-whitespace-sm) !important;
+}
+
+.u-mb-md {
+margin-bottom: var(--global-whitespace-md) !important;
+}
+
+.u-mb-lg {
+margin-bottom: var(--global-whitespace-lg) !important;
+}
+
+.u-mb-xl {
+margin-bottom: var(--global-whitespace-xl) !important;
+}
+
+/*
+Utilities: max-width
+---
+Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+max-width: 27em !important;
+}
+
+.u-max-width-sm {
+max-width: 39em !important;
+}
+
+.u-max-width-md {
+max-width: 50em !important;
+text-align: center;
+}
+
+.u-max-width-lg {
+max-width: 63.5em !important;
+}
+
+.u-max-width-none {
+max-width: none !important;
+}
+
+.ta{
+text-align: center;
+}
+/*
+Utilities: align
+---
+Utility classes align text or components
+*/
+
+.u-align-text-center {
+text-align: center;
+}
+
+.u-align-center {
+margin: 0 auto;
+}
+
+/*
+Utilities: text
+Utility classes to create smaller or bigger test
+*/
+
+.u-text-sm {
+font-size: 14px;
+}
+
+
+
+
+/*
+Utility: Widths
+---
+Utility classes to put specific widths onto elements
+Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+width: auto !important;
+}
+
+.u-1-of-2 {
+width: 50% !important;
+}
+
+.u-1-of-3 {
+width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+width: 25% !important;
+}
+
+.u-3-of-4 {
+width: 75% !important;
+}
+
+.u-1-of-5 {
+width: 20% !important;
+}
+
+.u-2-of-5 {
+width: 40% !important;
+}
+
+.u-3-of-5 {
+width: 60% !important;
+}
+
+.u-4-of-5 {
+width: 80% !important;
+}
+
+.u-1-of-6 {
+width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+.u-1-of-2-bp1 {
+    width: 50% !important;
+}
+.u-1-of-3-bp1 {
+    width: 33.3333333333% !important;
+}
+.u-2-of-3-bp1 {
+    width: 66.6666666667% !important;
+}
+.u-1-of-4-bp1 {
+    width: 25% !important;
+}
+.u-3-of-4-bp1 {
+    width: 75% !important;
+}
+.u-1-of-5-bp1 {
+    width: 20% !important;
+}
+.u-2-of-5-bp1 {
+    width: 40% !important;
+}
+.u-3-of-5-bp1 {
+    width: 60% !important;
+}
+.u-4-of-5-bp1 {
+    width: 80% !important;
+}
+.u-1-of-6-bp1 {
+    width: 16.6666666667% !important;
+}
+.u-5-of-6-bp1 {
+    width: 83.3333333333% !important;
+}
+}
+
+@media (min-width: 768px) {
+.u-1-of-2-bp2 {
+    width: 50% !important;
+}
+.u-1-of-3-bp2 {
+    width: 33.3333333333% !important;
+}
+.u-2-of-3-bp2 {
+    width: 66.6666666667% !important;
+}
+.u-1-of-4-bp2 {
+    width: 25% !important;
+}
+.u-3-of-4-bp2 {
+    width: 75% !important;
+}
+.u-1-of-5-bp2 {
+    width: 20% !important;
+}
+.u-2-of-5-bp2 {
+    width: 40% !important;
+}
+.u-3-of-5-bp2 {
+    width: 60% !important;
+}
+.u-4-of-5-bp2 {
+    width: 80% !important;
+}
+.u-1-of-6-bp2 {
+    width: 16.6666666667% !important;
+}
+.u-5-of-6-bp2 {
+    width: 83.3333333333% !important;
+}
+}
+
+@media (min-width: 992px) {
+.u-1-of-2-bp3 {
+    width: 50% !important;
+}
+.u-1-of-3-bp3 {
+    width: 33.3333333333% !important;
+}
+.u-2-of-3-bp3 {
+    width: 66.6666666667% !important;
+}
+.u-1-of-4-bp3 {
+    width: 25% !important;
+}
+.u-3-of-4-bp3 {
+    width: 75% !important;
+}
+.u-1-of-5-bp3 {
+    width: 20% !important;
+}
+.u-2-of-5-bp3 {
+    width: 40% !important;
+}
+.u-3-of-5-bp3 {
+    width: 60% !important;
+}
+.u-4-of-5-bp3 {
+    width: 80% !important;
+}
+.u-1-of-6-bp3 {
+    width: 16.6666666667% !important;
+}
+.u-5-of-6-bp3 {
+    width: 83.3333333333% !important;
+}
+}
+
+@media (min-width: 1200px) {
+.u-1-of-2-bp4 {
+    width: 50% !important;
+}
+.u-1-of-3-bp4 {
+    width: 33.3333333333% !important;
+}
+.u-2-of-3-bp4 {
+    width: 66.6666666667% !important;
+}
+.u-1-of-4-bp4 {
+    width: 25% !important;
+}
+.u-3-of-4-bp4 {
+    width: 75% !important;
+}
+.u-1-of-5-bp4 {
+    width: 20% !important;
+}
+.u-2-of-5-bp4 {
+    width: 40% !important;
+}
+.u-3-of-5-bp4 {
+    width: 60% !important;
+}
+.u-4-of-5-bp4 {
+    width: 80% !important;
+}
+.u-1-of-6-bp4 {
+    width: 16.6666666667% !important;
+}
+.u-5-of-6-bp4 {
+    width: 83.3333333333% !important;
+}
+}
+
+
+
+
+/*------------------------------------*\
+#MEDIA
+\*------------------------------------*/
+
+/*
+Media Queries
+---
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+Print styles.
+---
+Inlined to avoid the additional HTTP request:
+http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+*,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+    http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+a,
+a:visited {
+    text-decoration: underline;
+}
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+/*
+* Don't show links that are fragment identifiers,
+* or use the `javascript:` pseudo protocol
+*/
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+}
+pre {
+    white-space: pre-wrap !important;
+}
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+/*
+* Printing Tables:
+* http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
+thead {
+    display: table-header-group;
+}
+tr,
+img {
+    page-break-inside: avoid;
+}
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+h2,
+h3 {
+    page-break-after: avoid;
+}
+}
