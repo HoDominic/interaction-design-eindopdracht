@@ -104,9 +104,6 @@ html {
     grid-template-columns:1fr ;
     grid-template-rows:   1fr ;
    
-    
-
-
   }
 
 
@@ -309,6 +306,12 @@ img {
         }
     }
     
+      }
+
+
+      .c-name{
+          color: var(--lead-theme-color-x-dark);
+          font-weight: 500;
       }
 
 /*INPUT*/

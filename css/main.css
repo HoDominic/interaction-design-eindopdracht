@@ -96,19 +96,20 @@ html {
 
 /*GRID*/
 .grid-container {
+    
     display: grid;
-    grid-template-columns: 1fr 1fr 1.7fr 0.3fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr  ;/*1fr 1.7fr 0.3fr*/
+    grid-template-rows: 1fr ;  /*1fr*/
     gap: 0px 0px;
     grid-template-areas:
       "top-grid top-grid top-grid top-grid"
       "middle-grid middle-grid middle-grid middle-grid"
-      "bottom-grid-left bottom-grid-left bottom-grid-right bottom-grid-right";
+      
   }
   .top-grid { grid-area: top-grid; }
   .middle-grid { grid-area: middle-grid; }
-  .bottom-grid-left { grid-area: bottom-grid-left; }
-  .bottom-grid-right { grid-area: bottom-grid-right; }
+  
+    
 
 
 
