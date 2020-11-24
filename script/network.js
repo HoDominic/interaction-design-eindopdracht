@@ -30,7 +30,7 @@ async function chartIt() {
         data: {
             labels: xLabels,
             datasets: [{
-                label: 'Global Temperature Anomaly',
+                label: 'Global Temperature Anomaly (in °C)',
                 data: yTemps,
                 backgroundColor: '#63BBC5',
                 borderColor: ['rgb(132, 201, 209)'],
