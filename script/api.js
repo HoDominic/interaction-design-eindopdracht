@@ -59,33 +59,6 @@ async function loadChart() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //DATA FROM CSV
 
 
