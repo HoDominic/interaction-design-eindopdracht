@@ -376,9 +376,21 @@ img {
     font-weight: 700;
     color: var(--lead-theme-color);/*#6CC9D1*//*459AC4*/
     
+ 
+   
 }
 
-
+@media (max-width: 425px) {
+    .c-lead--xl {
+     font-size: 70;
+    }
+    @media(max-width:375px){
+        .c-lead--xl{
+            font-size: 65px;
+        }
+        @media(max-width)
+    }
+}
     
 
 
