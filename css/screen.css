@@ -388,7 +388,7 @@ img {
         .c-lead--xl{
             font-size: 65px;
         }
-        @media(max-width)
+
     }
 }
     
@@ -404,29 +404,6 @@ img {
     position: relative;
 }
 
-.c-figure__caption {
-    line-height: 15px;
-    margin-top: 8px;
-    padding-left: 6px;
-    padding-top: 1px;
-    border: 2px solid #0053FB;
-    border-width: 0 0 0 2px;
-    color: #474D59;
-}
-
-@media (min-width: 768px) {
-    .c-figure__caption--absolute {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-right: 8px;
-        text-align: right;
-        background-color: #fff;
-        padding: 16px;
-        max-width: 260px;
-        border-width: 0 4px 0 0;
-    }
-}
 
 /*------------------------------------*\
   #OBJECTS
