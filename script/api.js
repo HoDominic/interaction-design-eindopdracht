@@ -26,7 +26,7 @@ async function loadChart() {
         data: {
             labels: xLabels,
             datasets: [{
-                label: 'Global Temperature Anomaly (in °C)',
+                label: 'Global Average Temperature (in °C)',
                 data: yLabels,
                 backgroundColor:
                     '#63BBC5',
@@ -41,7 +41,7 @@ async function loadChart() {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true,
+                        beginAtZero: false,
                         responsive: true,
                         //graden teken toevoegen
                         callback: function (value, index, values) {
@@ -83,7 +83,7 @@ async function getData() {
         //years toevoegen aan x-as van grafiek
         //temperatuur toevoegen aan y-as van grafiek
         xLabels.push(year);
-        yLabels.push(temp);
+        yLabels.push(parseFloat(temp) + 14);
 
         console.log(year, temp);
 
