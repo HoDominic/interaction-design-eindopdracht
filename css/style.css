@@ -26,6 +26,14 @@
 
     /* Text colors */
     --lead-theme-color:#ff5b00;
+
+
+
+
+
+
+
+    --global-input-focus-boxShadowSpread: 0 0 10px var(--lead-theme-color);
 }
 
 /*
@@ -655,7 +663,14 @@ Small cta link with custom animation
     font-size: 1.1rem;
     }
 
- 
+    
+    .c-input:focus,
+.c-input:active {
+    border-color: var(--lead-theme-color);
+    box-shadow: var(--global-input-focus-boxShadowSpread);
+    -webkit-transform: scale(1.1) ;
+    transform: scale(1.1);
+}
     
     
     
