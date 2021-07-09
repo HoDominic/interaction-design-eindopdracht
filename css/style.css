@@ -24,10 +24,15 @@
 
 :root{
 
-    /* Text colors */
+    /*colors */
     --lead-theme-color:#ff5b00;
 
 
+    --global-color-neutral:#9C9EB8;
+    --global-color-neutral-dark:#6E708C;
+    --global-color-neutral-xx-dark:#35374d;
+
+    --global-color-neutral-xxxx-light: #FFFF;
 
 
 
@@ -195,7 +200,7 @@ a:focus {
     position: relative;
     padding: 24px 24px 0;
     display: flow-root;
-    background-color:white;/* #20223A*/
+    background-color:var(--global-color-neutral-xxxx-light);/* #20223A*/
 }
 
 /*GRID*/
@@ -212,12 +217,12 @@ a:focus {
 /* color modifiers */
 
 .o-row--primary-x-light {
-    background-color: #F2FAFF;
+    background-color: var(--global-color-neutral-xxxx-light);
 }
 
 .o-row--neutral-xx-dark {
-    color: black;
-    background: white; /*#20223A*/
+    color: var(--global-color-neutral-xx-dark) ;
+    background: var(--global-color-neutral-xxxx-light); /*#20223A*/
 }
 
 /* intro needs a larger z-index to pull the image over the next row */
@@ -661,7 +666,7 @@ Small cta link with custom animation
     border: 1px solid var(--lead-theme-color);
     padding-left: 30px;
     font-size: 1.1rem;
-    border-color: gray;
+    
     }
 
     
@@ -806,7 +811,7 @@ Small cta link with custom animation
 .c-lead--xl {
     font-size: 32px;
     line-height: 40px;
-    color: #ff5b00/*rgb(209, 140, 132)*/
+    color: var(--lead-theme-color)/*rgb(209, 140, 132)*/
 }
 
 @media (min-width: 768px) {
@@ -870,11 +875,11 @@ Small cta link with custom animation
 */
 
 .u-color-neutral-base {
-    color: #9C9EB8;
+    color: var(--global-color-neutral);
 }
 
 .u-color-neutral-dark {
-    color: #83859E;
+    color:var(--global-color-neutral-dark) ; /*#83859E*/
 }
 
 /*
