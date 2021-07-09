@@ -48,6 +48,7 @@ const validation = function () {
     form = document.querySelector(".form");
     email = document.querySelector('.c-input').value;
     text = document.querySelector('.js-error-message');
+    input = document.querySelector('.c-input');
 
     //Verificatie
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -58,19 +59,21 @@ const validation = function () {
         form.classList.remove("invalid");
         text.innerHTML = "Your email adress is valid";
         text.style.color = "#107E0C";
+        input.style.borderColor = '#107E0C';
 
     }
     else {
         form.classList.remove("valid");
         form.classList.add("invalid");
         text.innerHTML = "Please enter a valid email adress";
-        text.style.color = "#fc4444";
+        text.style.color = "#ff5b00";
+        input.style.borderColor = "#ff5b00";
 
         if (email == "") {
             form.classList.remove("valid");
             form.classList.add("invalid");
             text.innerHTML = "";
-            text.style.color = "#84c9d1";
+            text.style.color = "#ff5b00";
         }
     }
 };

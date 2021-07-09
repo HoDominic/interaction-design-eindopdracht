@@ -661,12 +661,13 @@ Small cta link with custom animation
     border: 1px solid var(--lead-theme-color);
     padding-left: 30px;
     font-size: 1.1rem;
+    border-color: gray;
     }
 
     
     .c-input:focus,
 .c-input:active {
-    border-color: var(--lead-theme-color);
+    /*border-color: var(--lead-theme-color);*/
     box-shadow: var(--global-input-focus-boxShadowSpread);
     -webkit-transform: scale(1.1) ;
     transform: scale(1.1);
