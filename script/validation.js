@@ -1,11 +1,12 @@
 
 //Globale variabele
-let button, form, email, text;
+let button, form, email, text, eventButton;
 
 
 //DOM
 const getDOMElements = function () {
     button = document.querySelector('.c-button');
+    eventButton = document.getElementById("eventButton");
 
 
 
@@ -13,15 +14,24 @@ const getDOMElements = function () {
 
 //Button event
 
+
+const listenToClickEventButton = function () {
+    eventButton.addEventListener('click', prevent);
+}
+
+function prevent() {
+    eventButton.preventDefault();
+}
+
+
 const listenToClickButton = function () {
     button.addEventListener('click', changeText);
 }
 
 function changeText() {
-    //text van button wijzigen
-    button.innerHTML = "Thanks for subscribing!";
+
     //kleur van achtergrond 
-    button.style.background = '#63BBC5';
+    button.style.background = '';
     button.style.color = "white";
 
 
@@ -41,12 +51,13 @@ const validation = function () {
 
     //Verificatie
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    /**/
 
     if (email.match(pattern)) {
         form.classList.add("valid");
         form.classList.remove("invalid");
         text.innerHTML = "Your email adress is valid";
-        text.style.color = "#84c9d1";
+        text.style.color = "#107E0C";
 
     }
     else {
@@ -74,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     getDOMElements();
 
     listenToClickButton();
+    listenToClickEventButton();
 
     validation();
 
