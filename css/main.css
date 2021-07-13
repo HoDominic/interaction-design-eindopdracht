@@ -134,7 +134,7 @@ Default markup for images to make them responsive
 img {
 max-width: 100%;
 vertical-align: top;
-margin-bottom: 100px;
+margin-bottom: 10px;
 
 }
 

@@ -32,7 +32,7 @@ function changeText() {
 
     //kleur van achtergrond 
     button.style.background = '';
-    button.style.color = "white";
+    button.style.color = "black";
 
 
 

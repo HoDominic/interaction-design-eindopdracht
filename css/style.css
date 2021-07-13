@@ -201,6 +201,7 @@ a:focus {
     padding: 24px 24px 0;
     display: flow-root;
     background-color:var(--global-color-neutral-xxxx-light);/* #20223A*/
+    margin-left:5px;
 }
 
 /*GRID*/
@@ -551,7 +552,8 @@ Small cta link with custom animation
     /*hover animation*/ 
       box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
       color: var(--global-color-neutral-xxxx-light);
-      border: none;
+      border: 1px solid var(--global-color-neutral-xxxx-dark);
+      background: var(--lead-theme-color);
     
     }  
     

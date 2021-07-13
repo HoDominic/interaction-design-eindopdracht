@@ -29,9 +29,9 @@ async function loadChart() {
                 label: 'Global Average Temperature (in °C)',
                 data: yLabels,
                 backgroundColor:
-                    '#63BBC5',
+                    '#ff5b00',
                 borderColor: [
-                    'rgb(132, 201, 209)'
+                    '#ff5b00'
                 ],
                 borderWidth: 1,
                 fill: false
