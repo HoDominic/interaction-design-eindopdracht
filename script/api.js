@@ -96,6 +96,13 @@ function setModal() {
 
 
 
+        /*spinner stoppen wanneer modal verschijnt!*/
+        setTimeout(function () {
+            loadingButton.classList.remove("button--loading");
+        }, 1800);
+
+
+
     });
 
 
@@ -105,6 +112,7 @@ function setModal() {
 
         loadingButton.classList.remove("button--loading");
     });
+
 
 
 
