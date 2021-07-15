@@ -6,11 +6,14 @@
 //GRAFIEK
 
 
+
 const xLabels = [];
 const yLabels = [];
 
 
 loadChart();
+setModal();
+/*toggleLoadingButton();*/
 
 
 
@@ -57,6 +60,40 @@ async function loadChart() {
 }
 
 
+
+
+function setModal() {
+    const open = document.getElementById('open');
+    const close = document.getElementById('close');
+
+    const modal = document.querySelector('.modal-container');
+    const loadingButton = document.querySelector('.c-button-modal')
+
+
+
+    open.addEventListener('click', function () {
+        modal.classList.add('show')
+        loadingButton.classList.add("button--loading");
+
+        console.log('clicked')
+
+
+
+    });
+
+
+    close.addEventListener('click', function () {
+        console.log('clicked close')
+        modal.classList.remove('show')
+
+        loadingButton.classList.remove("button--loading");
+    });
+
+
+
+
+
+}
 
 
 //DATA FROM CSV
