@@ -59,8 +59,20 @@ async function loadChart() {
 
 }
 
+/*SPINNER ANIMATION*/
+
+function spinner() {
+
+    const loadingButton = document.querySelector('.c-button-modal')
+
+    loadingButton.addEventListener('click', function () {
+        loadingButton.classList.add("button--loading");
 
 
+
+
+    })
+};
 
 function setModal() {
     const open = document.getElementById('open');
@@ -72,10 +84,15 @@ function setModal() {
 
 
     open.addEventListener('click', function () {
-        modal.classList.add('show')
-        loadingButton.classList.add("button--loading");
 
+        /*Modal laten verschijnen*/
+        loadingButton.classList.add("button--loading");
         console.log('clicked')
+
+        /* modal.classList.add('show')*/
+        setTimeout(function () {
+            modal.classList.add('show');
+        }, 1800);
 
 
 
