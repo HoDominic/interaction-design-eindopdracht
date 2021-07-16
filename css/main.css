@@ -210,14 +210,14 @@ Small cta link with custom animation
 
   @media screen and (min-width: 320px) {
     .c-button-modal{
-        right:25px
+        right:20px;
      
         
     }
   }
   @media screen and (min-width: 375px) {
     .c-button-modal{
-        right: 1rem;
+        right: 10px;
     }
   }
   @media screen and (min-width: 425px) {
