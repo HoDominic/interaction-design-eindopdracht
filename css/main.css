@@ -72,6 +72,20 @@
    
 
 
+   /* border radius */
+   --global-borderRadius: 5px;
+
+   /* Baseline settings */
+     --global-baseline: 8px;         
+     --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+ 
+     --global-whitespace-xs: calc(var(--global-baseline) * .5); /* = 4px */
+     --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
+     --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
+     --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
+     --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
+     --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+
     /* global page settings */
 
     --global-html-backgroundColor: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
@@ -94,16 +108,13 @@
 html {
 
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.5;
     font-family: "Open Sans Condensed", Helvetica, arial, sans-serif;
     font-weight: 400;
-    
     background-image: var(--global-color-neutral-xxxx-light) ;/*var(--global-html-backgroundColor)*/
-    
     
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     box-sizing: border-box;
 }
 
@@ -180,16 +191,15 @@ Small cta link with custom animation
     display: flex;
     align-items: center;
     margin-left: 30%;
-
     position: relative;
     cursor:pointer;
 
     /*styling button */
     background-color: var(--lead-theme-color);
     color:  var(--global-color-neutral-xxxx-light);;
-    border-radius: 5px;
+    border-radius: var(--global-borderRadius);
     border: 0;
-    padding: 10px 10px;
+    padding: calc(var(--global-baseline) + 2px ) calc(var(--global-baseline) + 2px ) ;
     box-shadow: 0 2px 4px rgb(0,0,0,0,2);
     font-size: 14px;
     font-family: "Roboto";
@@ -234,10 +244,10 @@ Small cta link with custom animation
   .c-button-modal-close{
     background-color: var(--lead-theme-color);
     color:  var(--global-color-neutral-xxxx-light);;
-    border-radius: 5px;
-    border: 0;
-    padding: 10px 10px;
-    box-shadow: 0 2px 4px rgb(0,0,0,0,2);
+    border-radius: var(--global-borderRadius);
+    border: calc(var(--global-baseline) - 8px);
+    padding: calc(var(--global-baseline) + 2px ) calc(var(--global-baseline) + 2px );
+    box-shadow: 0 2px calc(var(--global-baseline) / 2) rgb(0,0,0,0,2);
     font-size: 14px;
     font-family: "Roboto";
   }
@@ -328,7 +338,7 @@ Lead type treatments to style everything that differs from standard typography e
 font-size: 23px;
 line-height: 31px;
 font-weight: 300;
-margin-top: 50px;
+margin-top: calc(var(--global-whitespace-xl) + 2px);
 font-family: "Roboto";
 
 }
@@ -343,7 +353,7 @@ font-weight: 700;
 
 .c-lead--lg {
 font-size: 32px;
-line-height: 40px;
+line-height: calc(var(--global-baseline) * 5);;
 font-family: "Roboto";
 font-weight: 600;
 color:var(--global-color-neutral-xx-dark)

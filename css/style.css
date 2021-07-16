@@ -33,12 +33,19 @@
     --global-color-neutral-xx-dark:#35374d;
 
     --global-color-neutral-xxxx-light: #FFFF;
-
-
-
-
-
     --global-input-focus-boxShadowSpread: 0 0 10px var(--lead-theme-color);
+
+
+     /* Baseline settings */
+     --global-baseline: 8px;         
+     --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+ 
+     --global-whitespace-xs: calc(var(--global-baseline) * .5); /* = 4px */
+     --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
+     --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
+     --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
+     --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
+     --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
 }
 
 /*
@@ -83,7 +90,7 @@ html {
 img {
     max-width: 100%;
     vertical-align: top;
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--global-whitespace-md)+4);
     
 }
 
@@ -101,20 +108,20 @@ h3 {
 
 h1 {
     font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline) * 6);
+    margin: 0 0 var(--global-whitespace);
 }
 
 h2 {
     font-size: 32px;
-    line-height: 40px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline) * 5);
+    margin: 0 0 var(--global-whitespace);
 }
 
 h3 {
     font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline) * 4);
+    margin: 0 0 var(--global-whitespace);
 }
 
 h4,
@@ -132,12 +139,12 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+    margin: 0 0 var(--global-whitespace);
 }
 
 ul,
 ol {
-    padding-left: 24px;
+    padding-left: var(--global-whitespace);
 }
 
 li ul,
