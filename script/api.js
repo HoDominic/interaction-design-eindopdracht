@@ -13,7 +13,7 @@ const yLabels = [];
 
 loadChart();
 setModal();
-/*toggleLoadingButton();*/
+
 
 
 
@@ -92,14 +92,14 @@ function setModal() {
         /* modal.classList.add('show')*/
         setTimeout(function () {
             modal.classList.add('show');
-        }, 1800);
+        }, 1200);
 
 
 
         /*spinner stoppen wanneer modal verschijnt!*/
         setTimeout(function () {
             loadingButton.classList.remove("button--loading");
-        }, 1800);
+        }, 1200);
 
 
 

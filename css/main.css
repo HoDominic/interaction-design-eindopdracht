@@ -25,6 +25,19 @@
   
 }
 
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    src: url("../fonts/Roboto-Light.ttf") ;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("../fonts/Roboto-Bold.ttf") ;
+  
+}
+
 
 /*------------------------------------*\
 #Variables
@@ -84,7 +97,7 @@ html {
     line-height: 32px;
     font-family: "Open Sans Condensed", Helvetica, arial, sans-serif;
     font-weight: 400;
-    color: #000;
+    
     background-image: var(--global-color-neutral-xxxx-light) ;/*var(--global-html-backgroundColor)*/
     
     
@@ -156,166 +169,8 @@ Component: CTA link
 ---
 Small cta link with custom animation
 */
-
-.c-button {
-display: inline-block;
-text-decoration: none;
-text-transform: uppercase;
-letter-spacing: 2px;
-font-size: 13px;
-line-height: 24px;
-font-weight: 600;
-padding: 16px 32px;
-
-margin-top: 30px;
-color: var(--global-color-neutral-xxxx-dark);
-
-background: #fff ;/*var(--lead-theme-color)*/
-background-size: 200% auto;
-overflow: hidden;
-
-/*Hover animation*/
-box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
-transition: ease-out 0.3s;
-outline: none;
-border: 1px solid var(--global-color-neutral-xxxx-dark);
-
-}
-
-@media screen and (max-width: 992px) {
-.c-button{
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 600;
-    padding: 16px 32px;
-
-    margin-top: 30px;
-    color: var(--global-color-neutral-xxxx-dark);
-   
-    background: #fff ;/*var(--lead-theme-color)*/
-    background-size: 200% auto;
-    overflow: hidden;
-
-    /*Hover animation*/
-    box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
-    transition: ease-out 0.3s;
-    outline: none;
-    border: 1px solid var(--global-color-neutral-xxxx-dark);
-}
-
-}
-
-
-
-
-.c-button:hover {
-/*hover animation*/ 
-  box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
-  color: var(--global-color-neutral-xxxx-light);
-  border: none;
-
-}  
-
-@media screen and (max-width: 992px) {
-
-.c-button:hover {
-/*hover animation*/ 
-  box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
-  color: var(--global-color-neutral-xxxx-light);
-  border: none;
-
-}  
-
-}
-
-.c-button:active {
-color: var(--global-color-neutral-xxxx-light);
-
-background: var(--lead-theme-color);
-
-
-box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
-
-animation: shake 0.8s ease-in ;
-
-
-}
-
-
-
-@media screen and (max-width: 992px) {
-
-.c-button:active {
-    color: var(--global-color-neutral-xxxx-light);
-    
-    background: var(--lead-theme-color);
-
-    
-    box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
-
-    animation: shake 0.8s ease-in ;
-    
-    
-}
-
-  }
-
-
-@keyframes shake{
-
-0%{
-    transform: translate(0);
-}
-20%,
-40%,
-60%,
-80%{
-    transform: translate(.8em);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
-}
-10%,
-30%,
-50%{
-    transform: translate(-2em);
-}
-70%,
-100%{
-    transform: translate(0);
-}
-}
-
-
-@media screen and (max-width: 992px) {
-
-@keyframes shake{
-
-    0%{
-        transform: translate(0);
-    }
-    20%,
-    40%,
-    60%,
-    80%{
-        transform: translate(.8em);
-        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
-    }
-    10%,
-    30%,
-    50%{
-        transform: translate(-2em);
-    }
-    70%,
-    100%{
-        transform: translate(0);
-    }
-}
-
-  }
-
+/*
+.
 
 
 
@@ -334,13 +189,63 @@ animation: shake 0.8s ease-in ;
     color: white;
     border-radius: 5px;
     border: 0;
-    padding: 10px 25px;
+    padding: 10px 10px;
     box-shadow: 0 2px 4px rgb(0,0,0,0,2);
     font-size: 14px;
+    font-family: "Roboto";
+
+
+  
   }
 
+  @media screen and (min-width: 320px) {
+    .c-button-modal{
+        right:25px
+     
+        
+    }
+  }
+  @media screen and (min-width: 375px) {
+    .c-button-modal{
+        right: 1rem;
+    }
+  }
+  @media screen and (min-width: 425px) {
+    .c-button-modal{
+     left: 12px;
+  }
+}
+
+  @media screen and (min-width: 768px) {
+    .c-button-modal{
+        left: 3rem;
+        
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .c-button-modal{
+      left: 6rem;
+      padding:20px 50px;
+      font-size: 32px;
+        
+    }
+  }
+
+  .c-button-modal-close{
+    background-color: var(--lead-theme-color);
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgb(0,0,0,0,2);
+    font-size: 14px;
+    font-family: "Roboto";
+  }
+  
+ 
+
   .c-button-modal__text{
-    font: bold 16px 'Quicksand', san-serif;
+    /*font: bold 16px 'Quicksand', san-serif;*/
     color: #fff;
     transition: all 0.2s;
   }
@@ -379,6 +284,12 @@ animation: shake 0.8s ease-in ;
     to{
         transform: rotate(1turn);
     }
+}
+
+
+.modal__text{
+    font-size: 22px;
+    color: var(--global-color-neutral-xxx-dark);
 }
 
 /*INPUT*/
@@ -434,7 +345,9 @@ font-weight: 700;
 font-size: 32px;
 line-height: 40px;
 font-family: "Roboto";
-font-weight: 300;
+font-weight: 600;
+color:var(--global-color-neutral-xx-dark)
+
 }
 
 .c-lead--xl {
@@ -555,6 +468,7 @@ display:flex;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
   /*hide modal*/
   opacity: 0;
@@ -570,6 +484,7 @@ display:flex;
    
     opacity: 1;
     pointer-events: auto;
+    
   
    
 }
@@ -587,13 +502,16 @@ display:flex;
 
 
 .modal h1{
-    margin:0
+    margin:0;
+    color:var(--global-color-neutral-xx-dark);
 }
 
 
 .modal p{
  
     opacity: 0.7;
+    color: var(--global-color-neutral-xx-dark);
+    font-size: 20px;
 }
 
 
