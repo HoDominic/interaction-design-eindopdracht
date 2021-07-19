@@ -56,8 +56,8 @@ const validation = function () {
 
 
     //Verificatie
-    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    /**/
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    /*/^[^ ]+@[^ ]+\.[a-z]{2,3}$/*/
 
     if (email.match(pattern)) {
         form.classList.add("valid");
