@@ -92,8 +92,29 @@ img {
     vertical-align: top;
     margin-bottom: calc(var(--global-whitespace-md)+4);
     
+    
 }
 
+
+
+
+
+
+
+
+
+@media (max-width: 1440px) {
+    .image-1 {
+       display: none;
+       
+    }
+}
+@media (min-width: 1440px) {
+    .image-2 {
+       display: none;
+       
+    }
+}
 /*
     Elements: typography
     ---
@@ -215,11 +236,12 @@ a:focus {
 
 .columns{
     display: grid;
-    margin: 4rem auto;
-   
+    margin: 3rem auto;
     grid-auto-flow: column ;
     grid-template-rows: 2fr 1fr 1fr;
 }
+
+
 
 
 /* color modifiers */
@@ -750,6 +772,13 @@ Small cta link with custom animation
         display: flex;
         flex-grow: 1;
         justify-content: flex-end;        
+    }
+}
+
+@media (max-width: 1200px) {
+    .columns{
+       margin-bottom: -225px;
+       
     }
 }
 
