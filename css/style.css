@@ -538,7 +538,7 @@ Small cta link with custom animation
     margin-top: 30px;
     color: var(--global-color-neutral-xxxx-light);
     
-    background: var(--lead-theme-color) ;/*var(--lead-theme-color)*/
+    background: gray ;/*var(--lead-theme-color)*/
     background-size: 200% auto;
     overflow: hidden;
     border:none;
@@ -696,7 +696,7 @@ Small cta link with custom animation
     
     .c-input{
     
-    width: 290px;
+    width: 280px;
     height: 30px;
     outline: none;
     border-radius: 50px;
