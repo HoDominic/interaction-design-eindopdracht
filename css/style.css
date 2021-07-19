@@ -538,7 +538,7 @@ Small cta link with custom animation
     margin-top: 30px;
     color: var(--global-color-neutral-xxxx-light);
     
-    background: gray ;/*var(--lead-theme-color)*/
+    background: var(--global-color-neutral-dark);/*var(--lead-theme-color)*/
     background-size: 200% auto;
     overflow: hidden;
     border:none;
@@ -614,7 +614,7 @@ Small cta link with custom animation
     
     box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
     
-    animation: shake 0.8s ease-in ;
+    /*animation: shake 0.8s ease-in ;*/
     
     
     }
@@ -631,7 +631,7 @@ Small cta link with custom animation
         
         box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
     
-        animation: shake 0.8s ease-in ;
+        /*animation: shake 0.8s ease-in ;*/
         
         
     }
