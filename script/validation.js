@@ -8,6 +8,7 @@ const getDOMElements = function () {
     button = document.querySelector('.c-button');
     eventButton = document.getElementById("eventButton");
     email = document.querySelector('.c-input').value;
+    emailForm = document.querySelector('.c-input');
 
     form = document.querySelector(".form");
 
@@ -36,7 +37,7 @@ const listenToClickButton = function () {
 
 function changeText() {
 
-    form.reset()
+    emailForm.value.innerHTML = "";
 
 }
 
