@@ -12,16 +12,19 @@ const getDOMElements = function () {
 
 };
 
+
+
 //Button event
 
-
+/*
 const listenToClickEventButton = function () {
     eventButton.addEventListener('click', prevent);
 }
 
+
 function prevent() {
     eventButton.preventDefault();
-}
+}*/
 
 
 const listenToClickButton = function () {
@@ -32,7 +35,7 @@ function changeText() {
 
     //kleur van achtergrond 
     button.style.background = '';
-    button.style.color = "black";
+    button.style.color = "#FFF";
 
 
 
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     getDOMElements();
 
     listenToClickButton();
-    listenToClickEventButton();
+    /*listenToClickEventButton();*/
 
     validation();
 

@@ -35,6 +35,9 @@
     --global-color-neutral-xxxx-light: #FFFF;
     --global-input-focus-boxShadowSpread: 0 0 10px var(--lead-theme-color);
 
+       /* border radius */
+   --global-borderRadius: 5px;
+
 
      /* Baseline settings */
      --global-baseline: 8px;         
@@ -533,17 +536,20 @@ Small cta link with custom animation
     padding: 16px 32px;
     
     margin-top: 30px;
-    color: var(--global-color-neutral-xxxx-dark);
+    color: var(--global-color-neutral-xxxx-light);
     
-    background: #fff ;/*var(--lead-theme-color)*/
+    background: var(--lead-theme-color) ;/*var(--lead-theme-color)*/
     background-size: 200% auto;
     overflow: hidden;
+    border:none;
+    border-radius: var(--global-borderRadius);
     
     /*Hover animation*/
+    /*
     box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
     transition: ease-out 0.3s;
     outline: none;
-    border: 1px solid var(--global-color-neutral-xxxx-dark);
+    border: 1px solid var(--global-color-neutral-xxxx-dark);*/
     
     }
     
@@ -559,9 +565,9 @@ Small cta link with custom animation
         padding: 16px 32px;
     
         margin-top: 30px;
-        color: var(--global-color-neutral-xxxx-dark);
+        color: var(--global-color-neutral-xxxx-light);
        
-        background: #fff ;/*var(--lead-theme-color)*/
+        background: var(--lead-theme-color) ;/*var(--lead-theme-color)*/
         background-size: 200% auto;
         overflow: hidden;
     
@@ -570,6 +576,7 @@ Small cta link with custom animation
         transition: ease-out 0.3s;
         outline: none;
         border: 1px solid var(--global-color-neutral-xxxx-dark);
+        border-radius: var(--global-borderRadius);
     }
     
     }
@@ -581,7 +588,7 @@ Small cta link with custom animation
     /*hover animation*/ 
       box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
       color: var(--global-color-neutral-xxxx-light);
-      border: 1px solid var(--global-color-neutral-xxxx-dark);
+      /*border: 1px solid var(--global-color-neutral-xxxx-dark);*/
       background: var(--lead-theme-color);
     
     }  
@@ -688,7 +695,7 @@ Small cta link with custom animation
     
     .c-input{
     
-    width: 250px;
+    width: 290px;
     height: 30px;
     outline: none;
     border-radius: 50px;
