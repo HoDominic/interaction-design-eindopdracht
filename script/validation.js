@@ -7,6 +7,9 @@ let button, form, email, text, eventButton;
 const getDOMElements = function () {
     button = document.querySelector('.c-button');
     eventButton = document.getElementById("eventButton");
+    email = document.querySelector('.c-input').value;
+
+    form = document.querySelector(".form");
 
 
 
@@ -33,11 +36,7 @@ const listenToClickButton = function () {
 
 function changeText() {
 
-    //kleur van achtergrond 
-    button.style.background = '';
-    button.style.color = "#FFF";
-
-
+    form.reset()
 
 }
 
@@ -96,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     getDOMElements();
 
     listenToClickButton();
-    listenToClickEventButton();
+    /*listenToClickEventButton();*/
 
     validation();
 

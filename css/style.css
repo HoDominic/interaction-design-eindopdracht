@@ -30,6 +30,7 @@
 
     --global-color-neutral:#9C9EB8;
     --global-color-neutral-dark:#6E708C;
+    --global-color-neutral-x-dark:#808080;
     --global-color-neutral-xx-dark:#35374d;
 
     --global-color-neutral-xxxx-light: #FFFF;
@@ -538,18 +539,13 @@ Small cta link with custom animation
     margin-top: 30px;
     color: var(--global-color-neutral-xxxx-light);
     
-    background: var(--global-color-neutral-dark);/*var(--lead-theme-color)*/
+    background: var(--global-color-neutral-x-dark);
     background-size: 200% auto;
     overflow: hidden;
     border:none;
     border-radius: var(--global-borderRadius);
     
-    /*Hover animation*/
-    /*
-    box-shadow: inset 0 0 0 0  var(--lead-theme-color-x-dark) ;
-    transition: ease-out 0.3s;
-    outline: none;
-    border: 1px solid var(--global-color-neutral-xxxx-dark);*/
+    
     
     }
     
@@ -590,16 +586,17 @@ Small cta link with custom animation
       box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
       color: var(--global-color-neutral-xxxx-light);
       /*border: 1px solid var(--global-color-neutral-xxxx-dark);*/
-      background: var(--lead-theme-color);
+      /*background: var(--lead-theme-color);
     
-    }  
+    }  */
+}
     
     @media screen and (max-width: 992px) {
     
     .c-button:hover {
     /*hover animation*/ 
-      box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
-      color: var(--global-color-neutral-xxxx-light);
+     /* box-shadow: inset 300px 0 0 0 var(--lead-theme-color);*/
+      /*color: var(--global-color-neutral-xxxx-light);*/
       border: none;
     
     }  
@@ -608,10 +605,6 @@ Small cta link with custom animation
     
     .c-button:active {
     color: var(--global-color-neutral-xxxx-light);
-    
-    background: var(--lead-theme-color);
-    
-    
     box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
     
     /*animation: shake 0.8s ease-in ;*/
@@ -625,12 +618,7 @@ Small cta link with custom animation
     
     .c-button:active {
         color: var(--global-color-neutral-xxxx-light);
-        
-        background: var(--lead-theme-color);
-    
-        
-        box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
-    
+        /*box-shadow: inset 300px 0 0 0 var(--lead-theme-color);*/
         /*animation: shake 0.8s ease-in ;*/
         
         
