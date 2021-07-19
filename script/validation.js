@@ -16,7 +16,7 @@ const getDOMElements = function () {
 
 //Button event
 
-/*
+
 const listenToClickEventButton = function () {
     eventButton.addEventListener('click', prevent);
 }
@@ -24,7 +24,7 @@ const listenToClickEventButton = function () {
 
 function prevent() {
     eventButton.preventDefault();
-}*/
+}
 
 
 const listenToClickButton = function () {
@@ -52,6 +52,8 @@ const validation = function () {
     email = document.querySelector('.c-input').value;
     text = document.querySelector('.js-error-message');
     input = document.querySelector('.c-input');
+    button = document.querySelector('.c-button');
+
 
     //Verificatie
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -63,6 +65,7 @@ const validation = function () {
         text.innerHTML = "Your email adress is valid";
         text.style.color = "#107E0C";
         input.style.borderColor = '#107E0C';
+        button.style.backgroundColor = "#ff5b00"
 
     }
     else {
@@ -71,6 +74,8 @@ const validation = function () {
         text.innerHTML = "Please enter a valid email adress";
         text.style.color = "#ff5b00";
         input.style.borderColor = "#ff5b00";
+        button.style.backgroundColor = "gray"
+
 
         if (email == "") {
             form.classList.remove("valid");
@@ -91,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     getDOMElements();
 
     listenToClickButton();
-    /*listenToClickEventButton();*/
+    listenToClickEventButton();
 
     validation();
 

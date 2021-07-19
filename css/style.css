@@ -586,6 +586,7 @@ Small cta link with custom animation
     
     .c-button:hover {
     /*hover animation*/ 
+    /*
       box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
       color: var(--global-color-neutral-xxxx-light);
       /*border: 1px solid var(--global-color-neutral-xxxx-dark);*/
