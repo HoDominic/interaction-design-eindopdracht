@@ -580,7 +580,7 @@ Small cta link with custom animation
     
     
     
-    .c-button:hover {
+    /*.c-button:hover {*/
     /*hover animation*/ 
     /*
       box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
@@ -588,8 +588,8 @@ Small cta link with custom animation
       /*border: 1px solid var(--global-color-neutral-xxxx-dark);*/
       /*background: var(--lead-theme-color);
     
-    }  */
-}
+    }  
+}*/
     
     @media screen and (max-width: 992px) {
     
@@ -605,7 +605,7 @@ Small cta link with custom animation
     
     .c-button:active {
     color: var(--global-color-neutral-xxxx-light);
-    box-shadow: inset 300px 0 0 0 var(--lead-theme-color);
+    /*box-shadow: inset 300px 0 0 0 var(--lead-theme-color);*/
     
     /*animation: shake 0.8s ease-in ;*/
     
