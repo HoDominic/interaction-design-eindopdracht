@@ -29,7 +29,7 @@ async function loadChart() {
         data: {
             labels: xLabels,
             datasets: [{
-                label: 'Global Average Temperature (in °C)',
+                label: 'Combined land and sea temperature (in °C)',
                 data: yLabels,
                 backgroundColor:
                     '#ff5b00',
